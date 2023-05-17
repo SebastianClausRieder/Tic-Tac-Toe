@@ -94,6 +94,15 @@ function checkForWinner() {
             document.getElementById('winner').innerHTML = /*html */ `This game has won ${winner}!`;
         }, 2000);
     }
+
+    if (fields.length > 8) {
+        gameOver = true;
+        setTimeout(function () {
+            document.getElementById('game-over').classList.remove('d-none');
+            document.getElementById('game-over').classList.add('d-show');
+            document.getElementById('winner').innerHTML = /*html */ `Nobody won this round!`;
+        }, 2000);
+    }
 }
 
 function restart() {

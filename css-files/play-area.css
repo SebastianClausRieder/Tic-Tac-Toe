@@ -1,7 +1,15 @@
-table {
+.ultimate-bg {
     width: 750px;
     height: 750px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 750px;
+    height: 750px;
     border-radius: 10px 10px 10px 10px;
     border-collapse: collapse;
     display: flex;
@@ -60,6 +68,8 @@ table tr td:last-child {
     position: absolute;
 }
 
+/* Win lines */
+
 .horizontal {
     width: 650px;
     height: 5px;
@@ -72,6 +82,41 @@ table tr td:last-child {
 .turn-90-grad {
     transform: rotate(90deg) scale(0.0);
 }
+
+/* every line by ID */
+
+#line-1 {
+    top: 161px;
+}
+
+#line-2 {
+    top: 372px;
+}
+
+#line-3 {
+    top: 583px;
+}
+
+#line-4 {
+    top: 372px;
+    left: -152px;
+}
+
+#line-5 {
+    top: 372px;
+}
+
+#line-6 {
+    top: 372px;
+    right: -152px;
+}
+
+#line-7, #line-8 {
+    width: 850px;
+    top: 372px;
+}
+
+/* lines fin */
 
 .end-area {
     position: absolute;

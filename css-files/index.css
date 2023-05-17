@@ -74,10 +74,29 @@ body {
     background-color: #342e16;
     font-size: 20px;
     color: #a64e07;
-    cursor: pointer;    
+    cursor: pointer;
+    margin-top: 140px;
 }
 
 .game-name {
     font-size: 50px;
     color: #306797;
+}
+
+.flip-device {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #201e16;
+}
+
+.text {
+    font-size: 30px;
+    color: antiquewhite;
 }

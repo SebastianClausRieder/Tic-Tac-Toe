@@ -10,6 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css-files/index.css">
     <link rel="stylesheet" href="css-files/play-area.css">
+    <link rel="stylesheet" href="css-files/responsiv-hori.css">
+    <link rel="stylesheet" href="css-files/responsiv-verti.css">
     <!-- Java Script -->
     <script src="js-files/index.js"></script>
     <title>Tic Tac Toe</title>
@@ -27,58 +29,60 @@
         <player-one id="player-one" class="player font-kranky">Player One <img src="img/circle.png" class="player-icon"></player-one>
         <player-two id="player-two" class="player font-kranky">Player Two <img src="img/cross.png" class="player-icon"></player-two>
     </player-bar>
-    <table>
-        <tr>
-            <td onclick="placeChar(0)">
-                <img id="circle-0" src="img/circle.png" class="charakters d-none">
-                <img id="cross-0" src="img/cross.png" class="charakters d-none">
-            </td>
-            <td onclick="placeChar(1)">
-                <img id="circle-1" src="img/circle.png" class="charakters d-none">
-                <img id="cross-1" src="img/cross.png" class="charakters d-none">
-            </td>
-            <td onclick="placeChar(2)">
-                <img id="circle-2" src="img/circle.png" class="charakters d-none">
-                <img id="cross-2" src="img/cross.png" class="charakters d-none">
-            </td>
-        </tr>
-        <tr>
-            <td onclick="placeChar(3)">
-                <img id="circle-3" src="img/circle.png" class="charakters d-none">
-                <img id="cross-3" src="img/cross.png" class="charakters d-none">
-            </td>
-            <td onclick="placeChar(4)">
-                <img id="circle-4" src="img/circle.png" class="charakters d-none">
-                <img id="cross-4" src="img/cross.png" class="charakters d-none">
-            </td>
-            <td onclick="placeChar(5)">
-                <img id="circle-5" src="img/circle.png" class="charakters d-none">
-                <img id="cross-5" src="img/cross.png" class="charakters d-none">
-            </td>
-        </tr>
-        <tr>
-            <td onclick="placeChar(6)">
-                <img id="circle-6" src="img/circle.png" class="charakters d-none">
-                <img id="cross-6" src="img/cross.png" class="charakters d-none">
-            </td>
-            <td onclick="placeChar(7)">
-                <img id="circle-7" src="img/circle.png" class="charakters d-none">
-                <img id="cross-7" src="img/cross.png" class="charakters d-none">
-            </td>
-            <td onclick="placeChar(8)">
-                <img id="circle-8" src="img/circle.png" class="charakters d-none">
-                <img id="cross-8" src="img/cross.png" class="charakters d-none">
-            </td>
-        </tr>
-    </table>
-    <line id="line-1" class="horizontal" style="top: 365px;"></line>
-    <line id="line-2" class="horizontal" style="top: 574px;"></line>
-    <line id="line-3" class="horizontal" style="top: 784px;"></line>
-    <line id="line-4" class="horizontal turn-90-grad" style="top: 574px; left: 40px;"></line>
-    <line id="line-5" class="horizontal turn-90-grad" style="top: 574px;"></line>
-    <line id="line-6" class="horizontal turn-90-grad" style="top: 574px; right: 40px;"></line>
-    <line id="line-7" class="horizontal" style="top: 574px; transform: rotate(45deg) scale(0.0); width: 850px;"></line>
-    <line id="line-8" class="horizontal" style="top: 574px; transform: rotate(-45deg) scale(0.0); width: 850px;"></line>
+    <div class="ultimate-bg">
+        <table>
+            <tr>
+                <td onclick="placeChar(0)">
+                    <img id="circle-0" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-0" src="img/cross.png" class="charakters d-none">
+                </td>
+                <td onclick="placeChar(1)">
+                    <img id="circle-1" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-1" src="img/cross.png" class="charakters d-none">
+                </td>
+                <td onclick="placeChar(2)">
+                    <img id="circle-2" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-2" src="img/cross.png" class="charakters d-none">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="placeChar(3)">
+                    <img id="circle-3" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-3" src="img/cross.png" class="charakters d-none">
+                </td>
+                <td onclick="placeChar(4)">
+                    <img id="circle-4" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-4" src="img/cross.png" class="charakters d-none">
+                </td>
+                <td onclick="placeChar(5)">
+                    <img id="circle-5" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-5" src="img/cross.png" class="charakters d-none">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="placeChar(6)">
+                    <img id="circle-6" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-6" src="img/cross.png" class="charakters d-none">
+                </td>
+                <td onclick="placeChar(7)">
+                    <img id="circle-7" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-7" src="img/cross.png" class="charakters d-none">
+                </td>
+                <td onclick="placeChar(8)">
+                    <img id="circle-8" src="img/circle.png" class="charakters d-none">
+                    <img id="cross-8" src="img/cross.png" class="charakters d-none">
+                </td>
+            </tr>
+        </table>
+        <line id="line-1" class="horizontal"></line>
+        <line id="line-2" class="horizontal"></line>
+        <line id="line-3" class="horizontal"></line>
+        <line id="line-4" class="horizontal turn-90-grad"></line>
+        <line id="line-5" class="horizontal turn-90-grad"></line>
+        <line id="line-6" class="horizontal turn-90-grad"></line>
+        <line id="line-7" class="horizontal" style="transform: rotate(45deg) scale(0.0);"></line>
+        <line id="line-8" class="horizontal" style="transform: rotate(-45deg) scale(0.0);"></line>
+    </div>
     <game-over-screen id="game-over" class="end-area d-none">
         <img src="img/game-over-bg.jpg" class="game-over">
         <span id="winner" class="winner font-kranky"></span>
@@ -86,6 +90,13 @@
     </game-over-screen>
     <div id="start" class="start-screen">
         <button class="start" onclick="start()">Start a new round<br><span class="game-name font-kranky">Tic Tac Toe</span></button>
+    </div>
+    <div class="flip-device">
+        <title-bar class="title-bar">
+            <span class="title font-kranky">Tic Tac Toe</span>
+            <img src="img/icon/mountain-3-512.png" class="underline">
+        </title-bar>
+        <span class="text font-kranky">Please turn your smartphone vertically.</span>
     </div>
 </body>
 </html>

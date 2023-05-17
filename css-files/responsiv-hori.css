@@ -1,0 +1,19 @@
+@media all and (min-width: 601px) and (max-width: 1000px) {
+    
+    /* index */    
+    .player-bar {
+        display: none;
+    }
+
+    .start-screen {
+        display: none;
+    }
+
+    .ultimate-bg {
+        display: none;
+    }
+
+    .flip-device {
+        display: flex;
+    }
+}
