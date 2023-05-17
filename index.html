@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fonts -->
+    <link rel="stylesheet" href="css-files/font-kranky.css">
     <!-- File integration -->
     <!-- CSS -->
     <link rel="stylesheet" href="css-files/index.css">
+    <link rel="stylesheet" href="css-files/play-area.css">
     <!-- Java Script -->
     <script src="js-files/index.js"></script>
     <title>Tic Tac Toe</title>
@@ -17,6 +19,14 @@
     </style>
 </head>
 <body>
+    <title-bar class="title-bar">
+        <span class="title font-kranky">Tic Tac Toe</span>
+        <img src="img/icon/mountain-3-512.png" class="underline">
+    </title-bar>
+    <player-bar class="player-bar">
+        <player-one id="player-one" class="player font-kranky">Player One <img src="img/circle.png" class="player-icon"></player-one>
+        <player-two id="player-two" class="player font-kranky">Player Two <img src="img/cross.png" class="player-icon"></player-two>
+    </player-bar>
     <table>
         <tr>
             <td onclick="placeChar(0)">
@@ -61,5 +71,21 @@
             </td>
         </tr>
     </table>
+    <line id="line-1" class="horizontal" style="top: 365px;"></line>
+    <line id="line-2" class="horizontal" style="top: 574px;"></line>
+    <line id="line-3" class="horizontal" style="top: 784px;"></line>
+    <line id="line-4" class="horizontal turn-90-grad" style="top: 574px; left: 40px;"></line>
+    <line id="line-5" class="horizontal turn-90-grad" style="top: 574px;"></line>
+    <line id="line-6" class="horizontal turn-90-grad" style="top: 574px; right: 40px;"></line>
+    <line id="line-7" class="horizontal" style="top: 574px; transform: rotate(45deg) scale(0.0); width: 850px;"></line>
+    <line id="line-8" class="horizontal" style="top: 574px; transform: rotate(-45deg) scale(0.0); width: 850px;"></line>
+    <game-over-screen id="game-over" class="end-area d-none">
+        <img src="img/game-over-bg.jpg" class="game-over">
+        <span id="winner" class="winner font-kranky"></span>
+        <button class="restart font-kranky" onclick="restart()">Restart Game</button>
+    </game-over-screen>
+    <div id="start" class="start-screen">
+        <button class="start" onclick="start()">Start a new round<br><span class="game-name font-kranky">Tic Tac Toe</span></button>
+    </div>
 </body>
 </html>
