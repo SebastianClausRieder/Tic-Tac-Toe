@@ -1,7 +1,7 @@
 let fields = [];
 let gameOver = false;
 let currentChar;
-let winner;
+let winner = false;
 
 function start() {
     document.getElementById('start').classList.add('d-none');
@@ -117,10 +117,11 @@ function overcross() {
 
 function restart() {
     gameOver = false;
-    document.getElementById('game-over').classList.add('d-none');
-    document.getElementById('game-over').classList.remove('d-show');
     fields = [];
-    winner = null;
+    currentChar = 'cross';
+    winner = false;
+    elemetReset();
+
     for (let i = 1; i < 9; i++) {
         document.getElementById('line-' + i).style.transform = null;
     }
@@ -129,9 +130,12 @@ function restart() {
         document.getElementById('circle-' + c).classList.add('d-none');
         document.getElementById('cross-' + c).classList.add('d-none');
     }
-    
-    currentChar = 'cross';
+}
+
+function elemetReset() {
     document.getElementById('player-one').classList.remove('aktive-player');
     document.getElementById('player-two').classList.remove('aktive-player');
     document.getElementById('start').classList.remove('d-none');
+    document.getElementById('game-over').classList.add('d-none');
+    document.getElementById('game-over').classList.remove('d-show');
 }
