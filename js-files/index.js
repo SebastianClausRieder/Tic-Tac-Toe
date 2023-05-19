@@ -1,9 +1,11 @@
 let fields = [];
+let moves = 0;
 let gameOver = false;
 let currentChar;
 let winner = false;
 
 function start() {
+    moves = 0;
     document.getElementById('start').classList.add('d-none');
     currentChar = 'cross';
     document.getElementById('player-one').classList.add('aktive-player');
@@ -42,6 +44,7 @@ function draw() {
             document.getElementById('cross-' + f).classList.remove('d-none');
         } 
     }
+    moves++;
 }
 
 function checkForWinner() {
@@ -59,7 +62,7 @@ function checkForWinner() {
         }, 2000);
     }
 
-    if (fields.length > 8 && winner == false) {
+    if (moves > 8 && winner == false) {
         gameOver = true;
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none');
