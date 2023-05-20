@@ -53,23 +53,8 @@ function checkForWinner() {
     vertikal();
     overcross();
 
-    if (winner) {
-        gameOver = true;
-        setTimeout(function () {
-            document.getElementById('game-over').classList.remove('d-none');
-            document.getElementById('game-over').classList.add('d-show');
-            document.getElementById('winner').innerHTML = /*html */ `This game has won ${winner}!`;
-        }, 2000);
-    }
-
-    if (moves > 8 && winner == false) {
-        gameOver = true;
-        setTimeout(function () {
-            document.getElementById('game-over').classList.remove('d-none');
-            document.getElementById('game-over').classList.add('d-show');
-            document.getElementById('winner').innerHTML = /*html */ `Nobody won this round!`;
-        }, 2000);
-    }
+    winTheGame();
+    nobodyWin();
 }
 
 function horizontal() {
@@ -115,6 +100,28 @@ function overcross() {
     if (fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
         winner = fields[2];
         document.getElementById('line-8').style.transform = 'rotate(-45deg) scale(1.0)';
+    }
+}
+
+function winTheGame() {
+    if (winner) {
+        gameOver = true;
+        setTimeout(function () {
+            document.getElementById('game-over').classList.remove('d-none');
+            document.getElementById('game-over').classList.add('d-show');
+            document.getElementById('winner').innerHTML = /*html */ `This game has won ${winner}!`;
+        }, 2000);
+    }
+}
+
+function nobodyWin() {
+    if (moves > 8 && winner == false) {
+        gameOver = true;
+        setTimeout(function () {
+            document.getElementById('game-over').classList.remove('d-none');
+            document.getElementById('game-over').classList.add('d-show');
+            document.getElementById('winner').innerHTML = /*html */ `Nobody won this round!`;
+        }, 2000);
     }
 }
 
